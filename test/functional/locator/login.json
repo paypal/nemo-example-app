@@ -1,0 +1,18 @@
+{
+	"email": {
+		"locator": "login_email",
+		"type": "id"
+	},
+	"password": {
+		"locator": "login_password",
+		"type": "id"
+	},
+	"button": {
+		"locator": "input[type='submit'][name='submit.x']",
+		"type": "css"
+	},
+	"logout": {
+		"locator": "li.logout",
+		"type": "css"
+	}
+}

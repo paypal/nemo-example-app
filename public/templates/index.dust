@@ -1,0 +1,13 @@
+{>"layouts/master" /}
+
+{<body}
+    <h1>Sample form stuff</h1>
+    <form>
+    {>"fieldbox" id="foo"/}
+    {>"fieldbox" id="bar"/}
+    {>"fieldbox" id="bing"/}
+    {>"fieldbox" id="bang"/}
+    {>"selectbox" id="boom"/}
+    <div id="outy"></div>
+</form>
+{/body}

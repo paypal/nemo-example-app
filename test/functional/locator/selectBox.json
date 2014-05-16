@@ -1,0 +1,10 @@
+{
+	"abcOption": {
+		"locator": "select option[value='abc']",
+		"type": "css"
+	},
+	"xyzOption": {
+		"locator": "select option[value='xyz']",
+		"type": "css"
+	}
+}

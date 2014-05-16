@@ -1,0 +1,5 @@
+<div id="{id}">
+    <label for="{id}_text">{id} Text: </label>
+    <input type="text" name="{id}_text" id="{id}_text" class="texty"/>
+    <input type="button" value="Go {id}" data-fortext="{id}_text"/>
+</div>

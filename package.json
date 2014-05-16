@@ -1,0 +1,46 @@
+{
+  "name": "nemo-example-app",
+  "version": "0.1.0",
+  "description": "Nemo Example in Kraken",
+  "author": "@grawk",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "kraken-js": "git://github.com/jeffharrell/kraken-js.git#kraken.next",
+    "kraken-devtools": "git://github.com/jeffharrell/kraken-devtools.git",
+    "engine-munger": "git://github.com/pvenkatakrishnan/engine-munger.git",
+    "express": "~3.5.0",
+    "dustjs-helpers": "^1.2.0",
+    "adaro": "^0.1.5",
+    "localizr": "git://github.com/totherik/localizr.git",
+    "dustjs-linkedin": "^2.0.3",
+    "less": "^1.7.0"
+  },
+  "devDependencies": {
+    "mocha": "^1.18.0",
+    "supertest": "^0.9.0",
+    "grunt-dustjs": "^1.2.1",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-config-dir": "^0.3.2",
+    "grunt-localizr": "git://github.com/pvenkatakrishnan/grunt-localizr.git",
+    "grunt-copy-to": "0.0.10",
+    "grunt-contrib-jshint": "^0.6.5",
+    "grunt-mocha-cli": "^1.7.0",
+    "grunt": "^0.4.4",
+    "grunt-contrib-less": "^0.9.0",
+    "nconf": "~0.6.7",
+    "grunt-loop-mocha": "^0.3.0",
+    "nemo": "git://github.paypal.com/NodeTestTools/nemo.git#v0.6-beta",
+    "nemo-drivex": "^0.1.0",
+    "nemo-view": "git://github.paypal.com/NodeTestTools/nemo-view.git#v0.3-beta",
+    "nemo-locatex": "^0.3.0-beta",
+    "nemo-mocha-factory": "git://github.paypal.com/NodeTestTools/nemo-mocha-factory.git#v0.3-beta",
+    "nemo-jaws": "^0.2.0-beta",
+	"nemo-screenshot": "git://github.paypal.com/NodeTestTools/nemo-screenshot.git#v0.2-beta",
+    "xunit-file": "0.0.5",
+    "data-driven": "^1.0.0"
+  }
+}
