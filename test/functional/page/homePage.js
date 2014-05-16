@@ -12,6 +12,7 @@ module.exports = function (nemo) {
 			nemo.view.textBox.bangButton().click();
 			nemo.view.selectBox.abcOption().click();
 			return nemo.view.textBox.outBox().getText().then(function (outText) {
+				//console.log("outText", outText);
 				return (outText === "foobarbingbangabc");
 			});
 		}

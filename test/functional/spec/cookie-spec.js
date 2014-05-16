@@ -2,7 +2,7 @@
 var plugins = require("../config/nemo-plugins"),
 	nemoFactory = require("nemo-mocha-factory"),
 	setup = {};
-describe('this is a @nemoSuite@cookieTest@', function () {
+describe('@nemoSuite@cookieSuite@', function () {
 	nemoFactory({"plugins": plugins, "setup": setup});
 	it('should @setACookie@', function (done) {
 		nemo.driver.get(nemo.props.targetBaseUrl).then(function () {

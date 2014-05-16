@@ -6,16 +6,16 @@ var plugins = require("../config/nemo-plugins"),
 	setup = {
 		"view": ["selectBox", "textBox"]
 	};
-describe('this is a @fooSuite@', function() {
+describe('@nemoSuite@viewSuite@', function() {
 	nemoFactory({"plugins": plugins, "setup": setup, "context": nemo});
-    it('should open a URL', function(done) {
+    beforeEach(function(done) {
         nemo.driver.get(nemo.props.targetBaseUrl).then(function() {
 			done()
 		}, function(err) {
 			done(err);
 		});
     });
-	it('should use the view methods', function(done) {
+	it('should @useNemoView@', function(done) {
 		homePage(nemo).doStuff().then(function(ok) {
 			if (ok) {
 				done()
