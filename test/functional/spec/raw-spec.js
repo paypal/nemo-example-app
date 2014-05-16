@@ -14,9 +14,7 @@ describe('this is a @liveLoginSuite@', function () {
 		nemo.driver.findElement(nemo.wd.By.id("login_email")).clear();
 		nemo.driver.findElement(nemo.wd.By.id("login_email")).sendKeys("medelman-buyer@paypal.com");
 		nemo.driver.findElement(nemo.wd.By.id("login_password")).sendKeys("11111111");
-		nemo.screenshot.snap("preclick");
 		nemo.driver.findElement(nemo.wd.By.css("input[type='submit'][name='submit.x']")).click();
-		nemo.screenshot.snap("postclick");
 		nemo.drivex.waitForElement({"locator": "li.logout", "type": "css"}, 10000, "couldn't find logout list").then(function () {
 			console.log("found logout list");
 			done();

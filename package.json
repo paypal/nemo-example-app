@@ -33,13 +33,11 @@
     "grunt-contrib-less": "^0.9.0",
     "nconf": "~0.6.7",
     "grunt-loop-mocha": "^0.3.0",
-    "nemo": "git://github.paypal.com/NodeTestTools/nemo.git#v0.6-beta",
-    "nemo-drivex": "^0.1.0",
-    "nemo-view": "git://github.paypal.com/NodeTestTools/nemo-view.git#v0.3-beta",
-    "nemo-locatex": "^0.3.0-beta",
-    "nemo-mocha-factory": "git://github.paypal.com/NodeTestTools/nemo-mocha-factory.git#v0.3-beta",
-    "nemo-jaws": "^0.2.0-beta",
-	"nemo-screenshot": "git://github.paypal.com/NodeTestTools/nemo-screenshot.git#v0.2-beta",
+    "nemo": "git+ssh://git@github.com:paypal/nemo.git",
+    "nemo-drivex": "git+ssh://git@github.com:paypal/nemo-drivex.git",
+    "nemo-view": "git+ssh://git@github.com:paypal/nemo-view.git",
+    "nemo-locatex": "git+ssh://git@github.com:paypal/nemo-locatex.git",
+    "nemo-mocha-factory": "git+ssh://git@github.com:paypal/nemo-mocha-factory.git",
     "xunit-file": "0.0.5",
     "data-driven": "^1.0.0"
   }
