@@ -33,11 +33,11 @@
     "grunt-contrib-less": "^0.9.0",
     "nconf": "~0.6.7",
     "grunt-loop-mocha": "^0.3.0",
-    "nemo": "git+ssh://git@github.com:paypal/nemo.git",
-    "nemo-drivex": "git+ssh://git@github.com:paypal/nemo-drivex.git",
-    "nemo-view": "git+ssh://git@github.com:paypal/nemo-view.git",
-    "nemo-locatex": "git+ssh://git@github.com:paypal/nemo-locatex.git",
-    "nemo-mocha-factory": "git+ssh://git@github.com:paypal/nemo-mocha-factory.git",
+    "nemo": "^0.1.0",
+    "nemo-drivex": "^0.1.0",
+    "nemo-view": "^0.1.0",
+    "nemo-locatex": "^0.1.0",
+    "nemo-mocha-factory": "^0.1.0",
     "xunit-file": "0.0.5",
     "data-driven": "^1.0.0"
   }
