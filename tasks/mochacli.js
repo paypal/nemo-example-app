@@ -13,15 +13,6 @@ module.exports = function mochacli(grunt) {
 	        ignoreLeaks: false,
 	        ui: 'bdd',
 	        reporter: 'spec'
-	    },
-		sub: {
-			options: {
-				timeout: 6000,
-				ignoreLeaks: false,
-				ui: 'bdd',
-				grep: 'foo',
-				reporter: 'spec'
-			}
-		}
+	    }
 	};
 };
