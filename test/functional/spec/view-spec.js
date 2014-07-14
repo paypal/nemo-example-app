@@ -2,13 +2,12 @@
 var plugins = require("../config/nemo-plugins"),
 	nemoFactory = require("nemo-mocha-factory"),
 	homePage = require("../page/homePage"),
-	nemo = {},
 	setup = {
 		"view": ["selectBox", "textBox"]
 	};
 describe('@nemoSuite@viewSuite@', function() {
-	nemoFactory({"plugins": plugins, "setup": setup, "context": nemo});
-    beforeEach(function(done) {
+	nemoFactory({"plugins": plugins, "setup": setup});
+    it('should open a URL', function(done) {
         nemo.driver.get(nemo.props.targetBaseUrl).then(function() {
 			done()
 		}, function(err) {

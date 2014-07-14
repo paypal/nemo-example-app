@@ -1,7 +1,7 @@
 {
-  "name": "kraken-examples",
+  "name": "nemo-example-app",
   "version": "0.1.0",
-  "description": "Example applications built with kraken",
+  "description": "Nemo example in Kraken",
   "repository": {
     "type": "git",
     "url": "https://github.com/krakenjs/kraken-examples"
@@ -22,13 +22,14 @@
     "email": "medelman@paypal.com"
   }],
   "scripts": {
+    "test": "grunt test",
     "start": "node index.js"
   },
   "license": "Apache 2.0",
   "bugs": {
-    "url": "https://github.com/krakenjs/kraken-examples/issues"
+    "url": "https://github.com/paypal/nemo-example-app/issues"
   },
-  "homepage": "https://github.com/krakenjs/kraken-examples",
+  "homepage": "https://github.com/paypal/nemo-example-app",
   "dependencies": {
     "kraken-js": "^1.0.1",
     "kraken-devtools": "beta",

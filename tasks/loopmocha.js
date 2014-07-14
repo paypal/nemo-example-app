@@ -24,7 +24,7 @@ module.exports = function loopmocha(grunt) {
 			"targetBrowser": nconf.get("TARGET_BROWSER") || "firefox",
 			"targetServer": nconf.get("TARGET_SERVER") || "localhost",
 			"targetBaseUrl": "http://localhost:8000",
-			"seleniumJar": nconf.get("SELENIUM_JAR") || "/usr/local/bin/selenium-standalone.jar",
+			"seleniumJar": nconf.get("SELENIUM_JAR") || "/usr/bin/selenium-server-standalone.jar",
 			"serverProps": {"port": 4444},
 		},
 		"iterations": [
