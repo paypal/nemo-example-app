@@ -3,7 +3,7 @@ var plugins = require("../config/nemo-plugins"),
 	nemoFactory = require("nemo-mocha-factory"),
 	homePage = require("../page/homePage"),
 	setup = {};
-describe('basic @nemoSuite@', function() {
+describe('basic @nemoSuite@featureGroup1@', function() {
 	nemoFactory({"plugins": plugins, "setup": setup});
 	it('should @openAnUrl@', function(done) {
 		nemo.driver.get(nemo.props.targetBaseUrl).then(function() {

@@ -64,7 +64,7 @@
     "grunt-contrib-less": "^0.9.0",
     "grunt-mocha-cli": "^1.7.0",
     "nconf": "~0.6.7",
-    "grunt-loop-mocha": "^0.3.0",
+    "grunt-loop-mocha": "git://github.com/grawk/grunt-loop-mocha.git#develop",
     "nemo": "^0.1.0",
     "nemo-drivex": "^0.1.0",
     "nemo-view": "^0.1.0",
