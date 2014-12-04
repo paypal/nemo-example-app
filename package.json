@@ -1,13 +1,13 @@
 {
-  "name": "kraken-examples",
+  "name": "nemo-example-app",
   "version": "0.1.0",
-  "description": "Example applications built with kraken",
+  "description": "Example nemo suite that tests a sample kraken app",
   "repository": {
     "type": "git",
-    "url": "https://github.com/krakenjs/kraken-examples"
+    "url": "https://github.com/paypal/nemo-example-app"
   },
   "keywords": [
-    "express",
+    "nemo",
     "kraken",
     "kraken-js",
     "krakenjs",
@@ -26,13 +26,13 @@
   },
   "license": "Apache 2.0",
   "bugs": {
-    "url": "https://github.com/krakenjs/kraken-examples/issues"
+    "url": "https://github.com/paypal/nemo-example-app/issues"
   },
-  "homepage": "https://github.com/krakenjs/kraken-examples",
+  "homepage": "https://github.com/paypal/nemo-example-app",
   "dependencies": {
     "kraken-js": "^1.0.1",
     "kraken-devtools": "beta",
-    "engine-munger": "^0.1.3",
+    "engine-munger": "^0.2.4",
     "express": "^4.1.0",
     "dustjs-helpers": "~1.2.0",
     "dustjs-linkedin": "~2.3.4",
@@ -65,11 +65,11 @@
     "grunt-mocha-cli": "^1.7.0",
     "nconf": "~0.6.7",
     "grunt-loop-mocha": "^0.3.0",
-    "nemo": "^0.1.0",
-    "nemo-drivex": "^0.1.0",
-    "nemo-view": "^0.1.0",
-    "nemo-locatex": "^0.1.0",
-    "nemo-mocha-factory": "^0.1.0",
+    "nemo": "~0.2.6",
+    "nemo-drivex": "~0.1.5",
+    "nemo-view": "~0.2.5",
+    "nemo-locatex": "~0.1.4",
+    "nemo-mocha-factory": "~0.2.1",
     "xunit-file": "0.0.5",
     "data-driven": "^1.0.0"
   }
