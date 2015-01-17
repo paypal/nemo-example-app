@@ -22,11 +22,11 @@ module.exports = function loopmocha(grunt) {
       },
       "nemoData": {
         "autoBaseDir": "<%=loopmocha.basedir%>",
-        "targetBrowser": nconf.get("TARGET_BROWSER") || "chrome",
+        "targetBrowser": nconf.get("TARGET_BROWSER") || "firefox",
         "targetServer": nconf.get("TARGET_SERVER") || "localhost",
+        "localServer": true,
         "targetBaseUrl": "http://localhost:8000",
-        "seleniumJar": nconf.get("SELENIUM_JAR") || "/usr/local/bin/selenium-standalone.jar",
-        "serverProps": {"port": 4444}
+        "seleniumJar": nconf.get("SELENIUM_JAR") || "/usr/local/bin/selenium-standalone.jar"
       },
       "iterations": [
         {
