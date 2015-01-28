@@ -18,12 +18,11 @@ module.exports = function loopmocha(grunt) {
         "grep": grunt.option("grep") || 0,
         "debug": grunt.option("debug") || 0,
         "reporter": grunt.option("reporter") || "spec",
-        "parallel": true
+        "parallel": false
       },
       "nemoData": {
         "autoBaseDir": "<%=loopmocha.basedir%>",
         "targetBrowser": nconf.get("TARGET_BROWSER") || "firefox",
-        "targetServer": nconf.get("TARGET_SERVER") || "localhost",
         "localServer": true,
         "targetBaseUrl": "http://localhost:8000",
         "seleniumJar": nconf.get("SELENIUM_JAR") || "/usr/local/bin/selenium-standalone.jar"

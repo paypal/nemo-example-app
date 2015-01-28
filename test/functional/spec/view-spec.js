@@ -6,7 +6,7 @@ var plugins = require("../config/nemo-plugins"),
 	setup = {
 		"view": ["selectBox", "textBox"]
 	};
-describe('@nemoSuite@viewSuite@', function() {
+describe('@nemoSuite@viewSuite@featureGroup3@', function() {
 	nemoFactory({"plugins": plugins, "setup": setup, "context": nemo});
 	beforeEach(function(done) {
 		nemo.driver.get(nemo.props.targetBaseUrl).then(function() {
