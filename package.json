@@ -68,7 +68,7 @@
     "grunt-mocha-cli": "^1.7.0",
     "mocha": "^1.18.0",
     "nconf": "~0.6.7",
-    "nemo": "^0.3.1",
+    "nemo": "git://github.com/grawk/nemo#feature-nemo-cli",
     "nemo-drivex": "^0.1.0",
     "nemo-locatex": "^0.1.0",
     "nemo-mocha-factory": "^0.3.0",
