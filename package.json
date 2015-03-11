@@ -14,13 +14,16 @@
     "examples"
   ],
   "author": "Jeff Harrell <jeharrell@paypal.com>",
-  "contributors": [{
-    "name": "Poornima Venkatakrishnan",
-    "email": "pvenkatakrishnan@paypal.com"
-  }, {
-    "name": "Matt Edelman",
-    "email": "medelman@paypal.com"
-  }],
+  "contributors": [
+    {
+      "name": "Poornima Venkatakrishnan",
+      "email": "pvenkatakrishnan@paypal.com"
+    },
+    {
+      "name": "Matt Edelman",
+      "email": "medelman@paypal.com"
+    }
+  ],
   "scripts": {
     "start": "node index.js"
   },
@@ -51,26 +54,26 @@
     "localeresolver": "~0.1.0"
   },
   "devDependencies": {
-    "mocha": "^1.18.0",
-    "supertest": "^0.9.0",
-    "grunt-contrib-requirejs": "^0.4.3",
-    "grunt-dustjs": "^1.2.1",
-    "grunt-contrib-clean": "^0.5.0",
-    "grunt-config-dir": "^0.3.2",
-    "grunt-copy-to": "0.0.10",
-    "grunt-localizr": "^0.1.0",
-    "grunt-contrib-jshint": "^0.6.5",
+    "data-driven": "^1.0.0",
     "grunt": "^0.4.4",
+    "grunt-config-dir": "^0.3.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-jshint": "^0.6.5",
     "grunt-contrib-less": "^0.9.0",
-    "grunt-mocha-cli": "^1.7.0",
-    "nconf": "~0.6.7",
+    "grunt-contrib-requirejs": "^0.4.3",
+    "grunt-copy-to": "0.0.10",
+    "grunt-dustjs": "^1.2.1",
+    "grunt-localizr": "^0.1.0",
     "grunt-loop-mocha": "^0.3.0",
-    "nemo": "~0.2.6",
-    "nemo-drivex": "~0.1.5",
-    "nemo-view": "~0.2.5",
-    "nemo-locatex": "~0.1.4",
-    "nemo-mocha-factory": "~0.2.1",
-    "xunit-file": "0.0.5",
-    "data-driven": "^1.0.0"
+    "grunt-mocha-cli": "^1.7.0",
+    "mocha": "^1.18.0",
+    "nconf": "~0.6.7",
+    "nemo": "^0.3.1",
+    "nemo-drivex": "^0.1.0",
+    "nemo-locatex": "^0.1.0",
+    "nemo-mocha-factory": "^0.3.0",
+    "nemo-view": "^0.3.0",
+    "supertest": "^0.9.0",
+    "xunit-file": "0.0.5"
   }
 }
