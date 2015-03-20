@@ -1,0 +1,16 @@
+{
+  "plugins": {
+    "view": {
+      "module": "nemo-view",
+      "arguments": ["path:locator"]
+    }
+  },
+  "driver": {
+    "browser": "firefox",
+    "local": true,
+    "jar": "/usr/local/bin/selenium-server-standalone.jar"
+  },
+  "data": {
+    "baseUrl": "http://localhost:8000"
+  }
+}

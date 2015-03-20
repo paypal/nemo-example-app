@@ -1,15 +1,15 @@
 {
-  "email": {
+  "number": {
     "type": "css",
-    "locator": "#email"
+    "locator": "#ban"
   },
-  "password": {
+  "routing": {
     "type": "css",
-    "locator": "#password"
+    "locator": "#brn"
   },
   "button": {
     "type": "css",
-    "locator": "#loginbutton"
+    "locator": "#babutton"
   },
   "success": {
     "type": "css",
