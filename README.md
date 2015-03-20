@@ -50,7 +50,7 @@ of automation.
 of automation where inline locator strings are separated into JSON locator files.
 * `flow-spec.js` uses `flow/*.js` modules to illustrate how to abstract functionality into shareable modules
 
-### Using mocha directly
+## Using mocha directly
 
 Using `grunt auto` runs mocha via the intermediate [grunt-loop-mocha](https://github.com/grawk/grunt-loop-mocha) task.
 Sometimes, for debugging purposes, it is nice to strip that layer away and run the tests via mocha directly. To do that
