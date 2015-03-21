@@ -1,6 +1,7 @@
 /*global nemo:true, describe:true, it:true */
 var Nemo = require('nemo');
 var nemo = {};
+var util = require('../util');
 var Navigate = require('../flow/navigate');
 var Bank = require('../flow/bank');
 var Card = require('../flow/card');
@@ -8,7 +9,8 @@ var navigate, bank, card;
 
 describe('@flow@', function () {
   before(function (done) {
-    nemo = Nemo(function () {
+    nemo = Nemo(function (err) {
+      done = util.checkError(err, done);
       navigate = new Navigate(nemo);
       bank = new Bank(nemo);
       card = new Card(nemo);
@@ -25,10 +27,6 @@ describe('@flow@', function () {
     card.addFailure('1001001', 'Misa');
     bank.addSuccess('0432787332', '92929');
     bank.addFailure('1001001', '92929');
-    navigate.logout().then(function () {
-      done();
-    }, function (err) {
-      done(err);
-    });
+    navigate.logout().then(util.doneSuccess(done), util.doneError(done));
   });
 });

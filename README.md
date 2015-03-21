@@ -48,7 +48,9 @@ of automation.
 * `view-spec.js` uses JSON locator files which `nemo-view` turns into convenience methods
 ([see here](https://github.com/grawk/nemo-view/tree/1.0-develop#locator-methods)). Illustrates a second pass
 of automation where inline locator strings are separated into JSON locator files.
-* `flow-spec.js` uses `flow/*.js` modules to illustrate how to abstract functionality into shareable modules
+* `flow-spec.js`
+  * uses `flow/*.js` modules to illustrate how to abstract functionality into shareable modules
+  * uses `util/index.js` module to abstract error handling and callback management
 
 
 ## Using mocha directly

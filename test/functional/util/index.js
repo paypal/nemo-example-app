@@ -10,14 +10,22 @@ module.exports.waitForJSReady = function waitForJSReady(nemo) {
     });
 };
 
-module.exports.doneSuccess = function (done) {
+module.exports.doneSuccess = function (callback) {
   return function () {
-    done();
+    callback();
   };
 };
 
-module.exports.doneError = function (done) {
+module.exports.doneError = function (callback) {
   return function (err) {
-    done(err);
+    callback(err);
   };
 };
+
+module.exports.checkError = function (err, callback) {
+  if (err) {
+    callback(err);
+    return function () { /* noop */};
+  }
+  return callback;
+}
