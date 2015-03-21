@@ -3,7 +3,8 @@ var Card = function (nemo) {
 };
 
 var _enterForm = function (nemo, number, type) {
-  nemo.view.card.numberWaitVisible().sendKeys(number);
+  nemo.view.card.numberWaitVisible().clear();
+  nemo.view.card.number().sendKeys(number);
   nemo.view.card.typeOptionText(type);
   return nemo.view.card.button().click();
 }

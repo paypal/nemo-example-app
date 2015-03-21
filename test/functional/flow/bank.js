@@ -3,7 +3,8 @@ var Bank = function (nemo) {
 };
 var _enterForm = function (nemo, ban, brn) {
   nemo.view.nav.bankLink().click();
-  nemo.view.bank.numberWaitVisible().sendKeys(ban);
+  nemo.view.bank.numberWaitVisible().clear();
+  nemo.view.bank.number().sendKeys(ban);
   nemo.view.bank.routing().sendKeys(brn);
   return nemo.view.bank.button().click();
 }

@@ -4,8 +4,8 @@ var Navigate = function (nemo) {
 
 var _enterLoginForm = function (nemo, user, pass) {
   nemo.driver.get(nemo.data.baseUrl);
-  nemo.view.login.emailWaitVisible().sendKeys('me@mine.com');
-  nemo.view.login.password().sendKeys('11111111');
+  nemo.view.login.emailWaitVisible().sendKeys(user);
+  nemo.view.login.password().sendKeys(pass);
   return nemo.view.login.button().click();
 }
 Navigate.prototype.loginSuccess = function(user, pass) {
