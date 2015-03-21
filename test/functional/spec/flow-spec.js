@@ -8,7 +8,7 @@ var navigate, bank, card;
 
 describe('@flow@', function () {
   before(function (done) {
-    nemo = Nemo(function() {
+    nemo = Nemo(function () {
       navigate = new Navigate(nemo);
       bank = new Bank(nemo);
       card = new Card(nemo);
