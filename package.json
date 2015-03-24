@@ -1,6 +1,6 @@
 {
-  "name": "kraken-examples",
-  "version": "0.1.0",
+  "name": "nemo-example-app",
+  "version": "1.0.0",
   "description": "Example applications built with kraken",
   "repository": {
     "type": "git",
@@ -57,12 +57,12 @@
     "grunt-copy-to": "0.0.10",
     "grunt-dustjs": "^1.2.1",
     "grunt-localizr": "^0.1.0",
-    "grunt-loop-mocha": "git://github.com/grawk/grunt-loop-mocha#1.0.development",
+    "grunt-loop-mocha": "1.0.0-alpha.7",
     "grunt-mocha-cli": "^1.7.0",
     "mocha": "^1.18.0",
     "nconf": "~0.6.7",
-    "nemo": "git://github.com/grawk/nemo#1.0-develop",
-    "nemo-view": "git://github.com/grawk/nemo-view#1.0-develop",
+    "nemo": "1.0.0-alpha.1",
+    "nemo-view": "1.0.0-alpha.1",
     "supertest": "^0.9.0",
     "xunit-file": "0.0.5"
   }

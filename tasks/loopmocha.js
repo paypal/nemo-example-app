@@ -28,7 +28,10 @@ module.exports = function loopmocha(grunt) {
         }
       ],
       loop: {
-        reportLocation: grunt.option("reportLocation") || "<%=loopmocha.options.basedir%>/report"
+        reportLocation: grunt.option("reportLocation") || "<%=loopmocha.options.basedir%>/report",
+        parallel: {
+          type: 'file'
+        }
       }
     }
   };
