@@ -1,11 +1,12 @@
 /*global nemo:true, describe:true, it:true */
 var Nemo = require('nemo');
-var nemo = {};
-var util = require('../util');
 var Navigate = require('../flow/navigate');
 var Bank = require('../flow/bank');
 var Card = require('../flow/card');
-var navigate, bank, card;
+var util = require('../util');
+
+//instance variables
+var nemo, navigate, bank, card;
 
 describe('@flow@', function () {
   before(function (done) {
