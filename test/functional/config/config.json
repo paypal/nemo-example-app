@@ -6,9 +6,7 @@
     }
   },
   "driver": {
-    "browser": "firefox",
-    "local": true,
-    "jar": "/usr/local/bin/selenium-server-standalone.jar"
+    "browser": "firefox"
   },
   "data": {
     "baseUrl": "http://localhost:8000"
