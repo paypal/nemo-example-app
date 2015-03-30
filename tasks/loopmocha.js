@@ -14,7 +14,7 @@ module.exports = function loopmocha(grunt) {
       "basedir": path.resolve(__dirname, "../test/functional"),
       "nemoBaseDir": '<%=loopmocha.options.basedir%>',
       "driver": {
-        "browser": "chrome"
+        "browser": "firefox"
       },
       "mocha": {
         "timeout": grunt.option("timeout") || 600000,
