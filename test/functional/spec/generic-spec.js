@@ -12,13 +12,11 @@ describe('@generic@', function () {
   it('should execute high level functionality using generic methods', function (done) {
     //login
     nemo.driver.get(nemo.data.baseUrl);
-    nemo.view._waitVisible('id:email');
-    nemo.view._find('#email').sendKeys('me@mine.com');
+    nemo.view._waitVisible('id:email').sendKeys('me@mine.com');
     nemo.view._find('#password').sendKeys('11111111');
     nemo.view._find('#loginbutton').click();
     //add card
-    nemo.view._waitVisible('#addccform');
-    nemo.view._find('#cc').sendKeys('123456789012');
+    nemo.view._waitVisible('#cc').sendKeys('123456789012');
     nemo.view._finds('#type option').then(function(opts) {
       return opts[1].click();
     });
@@ -26,8 +24,7 @@ describe('@generic@', function () {
     nemo.view._waitVisible('p.result.good');
     //add bank
     nemo.view._find('#addbalink').click();
-    nemo.view._waitVisible('#ban');
-    nemo.view._find('#ban').sendKeys('0123545332');
+    nemo.view._waitVisible('#ban').sendKeys('0123545332');
     nemo.view._find('#brn').sendKeys('343434');
     nemo.view._find('#babutton').click();
     nemo.view._waitVisible('p.result.good');
