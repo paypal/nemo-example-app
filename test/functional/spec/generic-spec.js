@@ -26,7 +26,8 @@ describe('@generic@', function () {
     nemo.view._waitVisible('p.result.good');
     //add bank
     nemo.view._find('#addbalink').click();
-    nemo.view._waitVisible('#ban').sendKeys('0123545332');
+    nemo.view._waitVisible('#ban');
+    nemo.view._find('#ban').sendKeys('0123545332');
     nemo.view._find('#brn').sendKeys('343434');
     nemo.view._find('#babutton').click();
     nemo.view._waitVisible('p.result.good');
