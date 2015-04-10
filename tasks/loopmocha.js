@@ -1,7 +1,7 @@
 'use strict';
 
 var nconf = require('nconf');
-
+var path = require('path');
 module.exports = function loopmocha(grunt) {
   nconf.env()
     .argv();
@@ -9,57 +9,31 @@ module.exports = function loopmocha(grunt) {
   grunt.loadNpmTasks('grunt-loop-mocha');
   // Options
   return {
-    "src": ["<%=loopmocha.basedir%>/spec/*.js"],
-    "basedir": process.cwd() + "/" + "test/functional",
+    "src": ["<%=loopmocha.options.basedir%>/spec/*.js"],
     "options": {
+      "basedir": path.resolve(__dirname, "../test/functional"),
+      "nemoBaseDir": '<%=loopmocha.options.basedir%>',
+      "driver": {
+        "browser": "firefox"
+      },
       "mocha": {
-        "reportLocation": grunt.option("reportLocation") || "<%=loopmocha.basedir%>/report",
         "timeout": grunt.option("timeout") || 600000,
         "grep": grunt.option("grep") || 0,
         "debug": grunt.option("debug") || 0,
-        "reporter": grunt.option("reporter") || "spec",
-        "parallel": false
+        "reporter": grunt.option("reporter") || "spec"
       },
-      "nemoData": {
-        "autoBaseDir": "<%=loopmocha.basedir%>",
-        "targetBrowser": nconf.get("TARGET_BROWSER") || "firefox",
-        "localServer": true,
-        "targetBaseUrl": "http://localhost:8000",
-        "seleniumJar": nconf.get("SELENIUM_JAR") || "/usr/local/bin/selenium-standalone.jar"
+      loop: {
+        reportLocation: grunt.option("reportLocation") || "<%=loopmocha.options.basedir%>/report"
+        // UNCOMMENT BELOW if you want to see parallel behavior
+        //,parallel: {
+        //  type: 'file'
+        //}
       },
       "iterations": [
         {
           "description": "default"
         }
       ]
-    },
-    "local": {
-      "src": "<%=loopmocha.src%>"
-    },
-    "ci": {
-      "src": "<%=loopmocha.src%>",
-      "options": {
-        "iterations": [
-          {
-            "description": "ci-featuregroup-1",
-            "mocha": {
-              "grep": "@featureGroup1@"
-            }
-          } ,
-          {
-            "description": "ci-featuregroup-2",
-            "mocha": {
-              "grep": "@featureGroup2@"
-            }
-          },
-          {
-            "description": "ci-featuregroup-3",
-            "mocha": {
-              "grep": "@featureGroup3@"
-            }
-          }
-        ]
-      }
     }
   };
 };

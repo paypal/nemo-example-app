@@ -11,6 +11,6 @@ module.exports = function (grunt) {
     // Register group tasks
     grunt.registerTask('build', [ 'jshint', 'less', 'i18n', 'copyto' ]);
     grunt.registerTask('test', [ 'jshint', 'mochacli' ]);
-    grunt.registerTask('automation', ['loopmocha:local']);
+    grunt.registerTask('automation', ['loopmocha']);
 	grunt.registerTask('sub', ['mochacli:sub'])
 };

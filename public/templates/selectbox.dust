@@ -1,8 +1,0 @@
-<div id="{id}">
-    <label for="{id}_select">{id} Select: </label>
-    <select id="{id}">
-        <option>Select One</option>
-        <option value="abc">abc</option>
-        <option value="xyz">xyz</option>
-    </select>
-</div>
