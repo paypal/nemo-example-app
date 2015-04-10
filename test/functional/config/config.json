@@ -9,6 +9,6 @@
     "browser": "firefox"
   },
   "data": {
-    "baseUrl": "http://localhost:8000"
+    "baseUrl": "https://fast-castle-8102.herokuapp.com"
   }
 }

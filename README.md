@@ -17,16 +17,23 @@ $ npm start
 Run Nemo
 
 ```bash
-$ grunt automation
+$ NODE_ENV=local grunt automation
 ```
 
 If you didn't get a successful test run, where you saw a browser open on your desktop,
 then please [refer to this document](https://github.com/paypal/nemo-docs/blob/1.0-develop/driver-setup.md) for i
 nstructions on setting up a webdriver
 
+Note the `NODE_ENV=local` assignment. This tells nemo to override the default `config.json` values
+with anything found in `local.json`. If you run without`NODE_ENV=local` then only the values in `config.json`
+will be considered.
+
+In this case, the only think in `local.json` is a reference to the local URL. By default, the tests will point
+to an identical application hosted on heroku: https://fast-castle-8102.herokuapp.com
+
 ## About the application
 
-This application has one URL: http://localhost:8000
+This application has one route: http://localhost:8000
 
 It simulates a one-page app, with latency between navigations and simulated "add" operations, and success/failure messages
 printed to screen.
@@ -37,6 +44,8 @@ printed to screen.
 * failed add card: use 1001001
 * successful add bank: provide any account number except 1001001
 * failed add bank: use 1001001
+
+As mentioned above, an identical application is hosted here: https://fast-castle-8102.herokuapp.com
 
 ## Progression of automation tests
 
@@ -61,5 +70,5 @@ in this repo, do the following:
 
 ```bash
 $ export nemoBaseDir=/path/to/this/repo/nemo-example-app/test/functional
-$  node_modules/.bin/mocha test/functional/spec/*.js --timeout 15000
+$ node_modules/.bin/mocha test/functional/spec/*.js --timeout 30000 --grep @flow
 ```
