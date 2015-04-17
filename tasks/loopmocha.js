@@ -13,9 +13,6 @@ module.exports = function loopmocha(grunt) {
     "options": {
       "basedir": path.resolve(__dirname, "../test/functional"),
       "nemoBaseDir": '<%=loopmocha.options.basedir%>',
-      "driver": {
-        "browser": "firefox"
-      },
       "mocha": {
         "timeout": grunt.option("timeout") || 600000,
         "grep": grunt.option("grep") || 0,
@@ -23,7 +20,6 @@ module.exports = function loopmocha(grunt) {
         "reporter": grunt.option("reporter") || "spec"
       },
       loop: {
-        reportLocation: grunt.option("reportLocation") || "<%=loopmocha.options.basedir%>/report"
         // UNCOMMENT BELOW if you want to see parallel behavior
         //,parallel: {
         //  type: 'file'
