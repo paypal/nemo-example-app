@@ -7,7 +7,7 @@ Example usage of Nemo automation for a node.js web application (using kraken-js)
 Install and start the application.
 
 ```bash
-$ git clone -b 1.0-develop https://github.com/paypal/nemo-example-app.git
+$ git clone https://github.com/paypal/nemo-example-app.git
 $ cd nemo-example-app
 $ npm install
 $ grunt build
