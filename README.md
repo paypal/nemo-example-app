@@ -1,4 +1,4 @@
-# nemo-example-app (for nemo version 1.0)
+# nemo-example-app
 
 Example usage of Nemo automation for a node.js web application (using kraken-js)
 
