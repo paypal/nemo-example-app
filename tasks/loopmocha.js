@@ -15,7 +15,7 @@ module.exports = function loopmocha(grunt) {
       "nemoBaseDir": '<%=loopmocha.options.basedir%>',
       "mocha": {
         "timeout": grunt.option("timeout") || 600000,
-        "grep": grunt.option("grep") || 0,
+        "grep": grunt.option("grep") || "@flow@",
         "debug": grunt.option("debug") || 0,
         "reporter": grunt.option("reporter") || "spec"
       },

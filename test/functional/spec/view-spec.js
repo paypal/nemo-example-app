@@ -19,13 +19,27 @@ describe('@view@', function () {
     nemo.view.login.password().sendKeys('11111111');
     nemo.view.login.button().click();
 
-    //add card
+    //add card success
     nemo.view.card.numberWaitVisible().sendKeys('123456789012');
     nemo.view.card.typeOptionText('Misa');
     nemo.view.card.button().click();
     nemo.view.card.successWait();
 
-    //add bank
+    //add card fail
+    nemo.view.card.number().clear();
+    nemo.view.card.number().sendKeys('1001001');
+    nemo.view.card.typeOptionText('Misa');
+    nemo.view.card.button().click();
+    nemo.view.card.failureWait();
+
+    //add bank success
+    nemo.view.nav.bankLink().click();
+    nemo.view.bank.numberWaitVisible().sendKeys('0123545332');
+    nemo.view.bank.routing().sendKeys('343434');
+    nemo.view.bank.button().click();
+    nemo.view.bank.successWait();
+
+    //add bank fail
     nemo.view.nav.bankLink().click();
     nemo.view.bank.numberWaitVisible().sendKeys('0123545332');
     nemo.view.bank.routing().sendKeys('343434');
