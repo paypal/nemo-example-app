@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+'use strict';
+
+>>>>>>> 09d2010... fixing waitForJSReady functionality
 var util = require('../util');
 var Navigate = function (nemo) {
   this.nemo = nemo;

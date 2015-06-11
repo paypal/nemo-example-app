@@ -76,13 +76,12 @@ require([/* Dependencies */], function () {
 
         }, appTimeout);
       });
-      setTimeout(function() {
-        document.getElementsByTagName('body')[0].setAttribute('data-loaded', true);
-      }, 100);
+      document.getElementsByTagName('body')[0].setAttribute('data-loaded', true);
+
     }
 
   };
-
-  app.initialize();
-
+  setTimeout(function () {
+    app.initialize();
+  }, 500);
 });
