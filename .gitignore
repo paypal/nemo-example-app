@@ -8,6 +8,7 @@ jawsFiles
 node_modules
 test/functional/report/*.xml
 test/functional/report/*.png
+test/functional/report/*.html
 /logs
 /cdbs
 com.*
