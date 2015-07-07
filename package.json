@@ -57,12 +57,12 @@
     "grunt-copy-to": "0.0.10",
     "grunt-dustjs": "^1.2.1",
     "grunt-localizr": "^0.1.0",
-    "grunt-loop-mocha": "1.0.0-alpha.7",
+    "grunt-loop-mocha": "^1.1.0",
     "grunt-mocha-cli": "^1.7.0",
     "mocha": "^1.18.0",
     "nconf": "~0.6.7",
-    "nemo": "^1.0.0",
-    "nemo-view": "^1.0.0",
+    "nemo": "^1.0.6",
+    "nemo-view": "^1.2.0",
     "supertest": "^0.9.0",
     "xunit-file": "0.0.5"
   }
