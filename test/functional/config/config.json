@@ -3,6 +3,10 @@
     "view": {
       "module": "nemo-view",
       "arguments": ["path:locator"]
+    },
+    "screenshot": {
+      "module": "nemo-screenshot",
+      "arguments": ["path:report", ["click", "exception"]]
     }
   },
   "driver": {
