@@ -6,7 +6,7 @@
     },
     "screenshot": {
       "module": "nemo-screenshot",
-      "arguments": ["path:report", ["click", "exception"]]
+      "arguments": ["path:report"]
     }
   },
   "driver": {
