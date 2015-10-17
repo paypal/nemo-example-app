@@ -6,11 +6,11 @@
     },
     "screenshot": {
       "module": "nemo-screenshot",
-      "arguments": ["path:report"]
+      "arguments": ["path:report", ["click", "exception"]]
     }
   },
   "driver": {
-    "browser": "firefox"
+    "browser": "chrome"
   },
   "data": {
     "baseUrl": "https://fast-castle-8102.herokuapp.com"
