@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "_model": "object",
+    "cardLink": {
+      "type": "css",
+      "locator": "#addcclink"
+    },
+    "bankLink": {
+      "type": "css",
+      "locator": "#addbalink"
+    },
+    "logoutLink": {
+      "type": "css",
+      "locator": "#logoutlink"
+    }
+  },
+  "login": {
+    "_model": "object",
+    "email": {
+      "_model": "input",
+      "type": "css",
+      "locator": "#email"
+    },
+    "password": {
+      "_model": "input",
+      "type": "css",
+      "locator": "#password"
+    },
+    "button": {
+      "type": "css",
+      "locator": "#loginbutton"
+    },
+    "success": {
+      "type": "css",
+      "locator": "p.result.good"
+    },
+    "failure": {
+      "type": "css",
+      "locator": "p.result.bad"
+    }
+  },
+  "card": {
+    "_model": "object",
+    "number": {
+      "_model": "input",
+      "type": "css",
+      "locator": "#cc"
+    },
+    "type": {
+      "_model": "select",
+      "type": "css",
+      "locator": "#type"
+    },
+    "button": {
+      "type": "css",
+      "locator": "#ccbutton"
+    },
+    "success": {
+      "type": "css",
+      "locator": "p.result.good"
+    },
+    "failure": {
+      "type": "css",
+      "locator": "p.result.bad"
+    }
+  },
+  "bank": {
+    "_model": "object",
+    "number": {
+      "_model": "input",
+      "type": "css",
+      "locator": "#ban"
+    },
+    "routing": {
+      "_model": "input",
+      "type": "css",
+      "locator": "#brn"
+    },
+    "button": {
+      "type": "css",
+      "locator": "#babutton"
+    },
+    "success": {
+      "type": "css",
+      "locator": "p.result.good"
+    },
+    "failure": {
+      "type": "css",
+      "locator": "p.result.bad"
+    }
+  }
+}
