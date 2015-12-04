@@ -29,9 +29,9 @@
         </p>
         <p><label for="type">Type</label>
         <select name="type" id="type">
-            <option>Select One</option>
-            <option>Misa</option>
-            <option>Vaster Card</option>
+            <option value="">Select One</option>
+            <option value="Misa">Misa</option>
+            <option value="Vaster Card">Vaster Card</option>
         </select>
         </p>
         <p>

@@ -4,6 +4,13 @@
       "module": "nemo-view",
       "arguments": ["path:locator"]
     },
+    "page": {
+      "module": "nemo-page",
+      "arguments": [
+        "path:page-locator",
+        null
+      ]
+    },
     "screenshot": {
       "module": "nemo-screenshot",
       "arguments": ["path:report"]
