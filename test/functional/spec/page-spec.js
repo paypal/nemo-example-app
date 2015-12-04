@@ -10,7 +10,7 @@ describe('@page@', function () {
   after(function (done) {
     nemo.driver.quit().then(done);
   });
-  it('should execute high level functionality using generic methods', function (done) {
+  it('should execute high level functionality using nemo page methods', function (done) {
 
     //login
     nemo.driver.get(nemo.data.baseUrl);

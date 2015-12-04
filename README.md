@@ -50,6 +50,7 @@ of automation.
 * `view-spec.js` uses JSON locator files which `nemo-view` turns into convenience methods
 ([see here](https://github.com/paypal/nemo-view/blob/master/README.md#locator-methods)). Illustrates a second pass
 of automation where inline locator strings are separated into JSON locator files.
+* `page-spec.js` uses JSON locator files which [nemo-page](https://github.com/OuranosSkia/nemo-page)(like `nemo-view`) uses to build a model to allow you to do element-level methods in a simple, concise, and precise way.
 * `flow-spec.js`
   * uses `flow/*.js` modules to illustrate how to abstract functionality into shareable modules
   * uses `util/index.js` module to abstract error handling and callback management
