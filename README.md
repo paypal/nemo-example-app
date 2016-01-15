@@ -21,7 +21,7 @@ $ grunt automation
 ```
 
 If you didn't get a successful test run, where you saw a browser open on your desktop,
-then please [refer to this document](https://github.com/paypal/nemo-docs/blob/1.0-develop/driver-setup.md) for
+then please [refer to this document](https://github.com/paypal/nemo-docs/blob/master/driver-setup.md) for
 instructions on setting up a webdriver.
 
 ## About the application
