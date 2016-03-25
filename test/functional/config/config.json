@@ -21,17 +21,17 @@
       "arguments": ["WARNING"]
 =======
       "arguments": ["path:report"]
+<<<<<<< 7923858c78023c3d3a16bec27e5ecee87e97c24e
     },
     "wdb": {
       "module": "nemo-wd-bridge"
 >>>>>>> wdb stuff
+=======
+>>>>>>> further wd stuff
     }
   },
   "driver": {
-    "jar": "/Users/medelman/bin/selenium-server-standalone-2.48.2.jar",
-    "browser": "firefox",
-    "server": "localhost",
-    "local": true
+    "browser": "firefox"
   },
   "data": {
     "baseUrl": "https://fast-castle-8102.herokuapp.com"

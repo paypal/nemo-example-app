@@ -5,7 +5,11 @@
     }
   },
   "driver": {
+<<<<<<< 7923858c78023c3d3a16bec27e5ecee87e97c24e
     "jar": "env:SELENIUM_STANDALONE_PATH",
+=======
+    "jar": "/Users/medelman/bin/selenium-server-standalone-2.48.2.jar",
+>>>>>>> further wd stuff
     "browser": "firefox",
     "server": "localhost",
     "local": true
