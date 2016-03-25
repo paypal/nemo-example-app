@@ -6,9 +6,18 @@ var util = require('../util');
 describe('@generic@', function () {
   before(function (done) {
     nemo = Nemo(function (err) {
+<<<<<<< c209efe7d01d3ebd51b35c1eb10b7fb66db1eee3
       if (err) {
         return done(err);
       }
+=======
+      //nemo.wd.logging.installConsoleHandler();
+      //nemo.wd.logging.getLogger().setLevel(nemo.wd.logging.Level.ERROR);
+      nemo.driver.controlFlow().on('uncaughtException', function (err) {
+        console.error('err', err);
+        throw err;
+      });
+>>>>>>> wdb stuff
       done();
     });
   });

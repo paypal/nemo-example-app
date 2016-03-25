@@ -13,15 +13,25 @@
     },
     "screenshot": {
       "module": "nemo-screenshot",
+<<<<<<< c209efe7d01d3ebd51b35c1eb10b7fb66db1eee3
       "arguments": ["path:report", ["exception", "click"]]
     },
     "logger": {
       "module": "nemo-logger",
       "arguments": ["WARNING"]
+=======
+      "arguments": ["path:report"]
+    },
+    "wdb": {
+      "module": "nemo-wd-bridge"
+>>>>>>> wdb stuff
     }
   },
   "driver": {
-    "browser": "firefox"
+    "jar": "/Users/medelman/bin/selenium-server-standalone-2.48.2.jar",
+    "browser": "firefox",
+    "server": "localhost",
+    "local": true
   },
   "data": {
     "baseUrl": "https://fast-castle-8102.herokuapp.com"
