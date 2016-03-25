@@ -10,8 +10,6 @@ describe('@wdb@', function () {
         console.error(err);
         done(err);
       }
-      nemo.wd.logging.installConsoleHandler();
-      nemo.wd.logging.getLogger().setLevel(nemo.wd.logging.Level.ALL);
       nemo.driver.controlFlow().on('uncaughtException', function (err) {
         console.error('err', err);
         throw err;
