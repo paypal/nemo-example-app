@@ -14,16 +14,10 @@
     "screenshot": {
       "module": "nemo-screenshot",
       "arguments": ["path:report"]
-    },
-    "wdb": {
-      "module": "nemo-wd-bridge"
     }
   },
   "driver": {
-    "jar": "/Users/medelman/bin/selenium-server-standalone-2.48.2.jar",
-    "browser": "firefox",
-    "server": "localhost",
-    "local": true
+    "browser": "firefox"
   },
   "data": {
     "baseUrl": "https://fast-castle-8102.herokuapp.com"
