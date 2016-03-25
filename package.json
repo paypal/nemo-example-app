@@ -61,10 +61,11 @@
     "grunt-mocha-cli": "^1.7.0",
     "mocha": "^1.18.0",
     "nconf": "~0.6.7",
-    "nemo": "^1.0.6",
-    "nemo-screenshot": "^1.1.0",
-    "nemo-view": "^1.2.0",
+    "nemo": "^2.0.0",
     "nemo-page": "^1.0.0",
+    "nemo-screenshot": "^2.0.0",
+    "nemo-view": "^2.0.0",
+    "nemo-wd-bridge": "0.0.1",
     "supertest": "^0.9.0",
     "xunit-file": "0.0.5"
   }

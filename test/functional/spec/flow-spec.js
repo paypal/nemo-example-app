@@ -15,6 +15,13 @@ describe('@flow@', function () {
       navigate = new Navigate(nemo);
       bank = new Bank(nemo);
       card = new Card(nemo);
+
+      nemo.wd.logging.installConsoleHandler();
+      nemo.wd.logging.getLogger().setLevel(nemo.wd.logging.Level.ALL);
+      nemo.driver.controlFlow().on('uncaughtException', function (err) {
+        console.error('err', err);
+        throw err;
+      });
       done();
     });
   });
