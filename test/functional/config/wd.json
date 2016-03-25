@@ -1,0 +1,16 @@
+{
+  "plugins": {
+    "wdb": {
+      "module": "nemo-wd-bridge"
+    }
+  },
+  "driver": {
+    "jar": "/Users/medelman/bin/selenium-server-standalone-2.48.2.jar",
+    "browser": "firefox",
+    "server": "localhost",
+    "local": true
+  },
+  "data": {
+    "baseUrl": "http://localhost:8000"
+  }
+}
