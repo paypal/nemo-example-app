@@ -5,7 +5,12 @@ var util = require('../util');
 
 describe('@view@', function () {
   before(function (done) {
-    nemo = Nemo(done);
+    nemo = Nemo(function (err) {
+      if (err) {
+        return done(err);
+      }
+      done();
+    });
   });
   after(function (done) {
     nemo.driver.quit().then(done);

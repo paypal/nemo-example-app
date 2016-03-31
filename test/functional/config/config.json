@@ -14,6 +14,10 @@
     "screenshot": {
       "module": "nemo-screenshot",
       "arguments": ["path:report"]
+    },
+    "logger": {
+      "module": "nemo-logger",
+      "arguments": ["ALL"]
     }
   },
   "driver": {

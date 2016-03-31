@@ -1,19 +1,14 @@
 /*global nemo:true, describe:true, it:true */
 var Nemo = require('nemo');
 var nemo = {};
-var util = require('../util');
 
 describe('@wdb@', function () {
   before(function (done) {
     nemo = Nemo(function (err) {
       if (err) {
         console.error(err);
-        done(err);
+        return done(err);
       }
-      nemo.driver.controlFlow().on('uncaughtException', function (err) {
-        console.error('err', err);
-        throw err;
-      });
       done();
     });
   });

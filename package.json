@@ -62,6 +62,7 @@
     "mocha": "^1.18.0",
     "nconf": "~0.6.7",
     "nemo": "^2.0.0",
+    "nemo-logger": "^1.0.1",
     "nemo-page": "^1.0.0",
     "nemo-screenshot": "^2.0.0",
     "nemo-view": "^2.0.0",
