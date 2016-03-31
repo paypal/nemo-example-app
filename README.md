@@ -63,7 +63,7 @@ of automation where inline locator strings are separated into JSON locator files
 
 ## Getting feedback from your tests
 
-The core nemo modules use the [debug]() module for logging. It is fairly easy to get (or hide) the useful logging output.
+The core nemo modules use the [debug](https://www.npmjs.com/package/debug) module for logging. It is fairly easy to get (or hide) the useful logging output.
 
 If you want to see a good amount of logging information, set `DEBUG=nemo*,selenium-drivex*`.
 
