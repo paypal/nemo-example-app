@@ -2,6 +2,11 @@
 
 Example usage of Nemo automation for a node.js web application (using kraken-js)
 
+## Pre-requisite
+
+It is recommended that you are running `node@v4` or above. If you are using `v0.12` for some reason, note that newer versions of selenium-webdriver 
+use ES6 features. You will need to make sure your node process is started with the `harmony` flag. In general, it's best to use `node@v4` or newer.
+
 ## Get started
 
 Install and start the application.
@@ -74,7 +79,8 @@ in this repo, do the following:
 ```bash
 $ export nemoBaseDir=/path/to/this/repo/nemo-example-app/test/functional
 $ DEBUG=nemo*,selenium-drivex*
-$ node_modules/.bin/mocha test/functional/spec/*.js --timeout 30000 --grep @flow
+$ node_modules/.bin/mocha test/functional/spec/*.js --timeout 30000 --grep @flow --harmony
 ```
 
 Note: the `DEBUG` variable is optional, if you want to see a lot of logging during your tests
+Note: the `harmony` flag is only necessary if you are using node < v4
