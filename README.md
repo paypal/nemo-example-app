@@ -42,7 +42,7 @@ As mentioned above, an identical application is hosted here: https://fast-castle
 
 ## Progression of automation tests
 
-There are three suite files:
+There are several suite files, each illustrating different things:
 
 * `generic-spec.js` uses inline locator strings and generic `nemo-view` methods
 ([see here](https://github.com/paypal/nemo-view/blob/master/README.md#genericunderbar-methods)). Illustrates a first pass
@@ -51,10 +51,19 @@ of automation.
 ([see here](https://github.com/paypal/nemo-view/blob/master/README.md#locator-methods)). Illustrates a second pass
 of automation where inline locator strings are separated into JSON locator files.
 * `page-spec.js` uses JSON locator files which [nemo-page](https://github.com/OuranosSkia/nemo-page)(like `nemo-view`) uses to build a model to allow you to do element-level methods in a simple, concise, and precise way.
+* `wdb-spec.js` uses the [nemo-wd-bridge](https://github.com/paypal/nemo-wd-bridge) plugin to provide the [wd](https://github.com/admc/wd) interface, for those who prefer it.
 * `flow-spec.js`
   * uses `flow/*.js` modules to illustrate how to abstract functionality into shareable modules
   * uses `util/index.js` module to abstract error handling and callback management
 
+## Getting feedback from your tests
+
+The core nemo modules use the [debug]() module for logging. It is fairly easy to get (or hide) the useful logging output.
+
+If you want to see a good amount of logging information, set `DEBUG=nemo*,selenium-drivex*`.
+
+Additionally, the `nemo-logger` module is installed to switch on the [selenium-webdriver logging](http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/logging.html). The output can be quite verbose, 
+but if you need it, change the value of the plugin argument in the `test/functional/config/config.json` file from `WARNING` to `ALL`.
 
 ## Using mocha directly
 
@@ -64,5 +73,8 @@ in this repo, do the following:
 
 ```bash
 $ export nemoBaseDir=/path/to/this/repo/nemo-example-app/test/functional
+$ DEBUG=nemo*,selenium-drivex*
 $ node_modules/.bin/mocha test/functional/spec/*.js --timeout 30000 --grep @flow
 ```
+
+Note: the `DEBUG` variable is optional, if you want to see a lot of logging during your tests
