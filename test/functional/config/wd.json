@@ -5,7 +5,7 @@
     }
   },
   "driver": {
-    "jar": "/Users/medelman/bin/selenium-server-standalone-2.48.2.jar",
+    "jar": "env:SELENIUM_STANDALONE_PATH",
     "browser": "firefox",
     "server": "localhost",
     "local": true

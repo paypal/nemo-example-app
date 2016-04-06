@@ -32,6 +32,16 @@ module.exports = function loopmocha(grunt) {
           "description": "default"
         }
       ]
+    },
+    "wdb": {
+      "src": "<%=loopmocha.src%>",
+      "options": {
+        "NODE_ENV": "wd",
+        "SELENIUM_STANDALONE_PATH": nconf.get("SELENIUM_STANDALONE_PATH"),
+        "mocha": {
+          "grep": "@wdb"
+        }
+      }
     }
   };
 };
