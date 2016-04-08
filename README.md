@@ -58,7 +58,7 @@ of automation.
 of automation where inline locator strings are separated into JSON locator files.
 * `page-spec.js` uses JSON locator files which [nemo-page](https://github.com/OuranosSkia/nemo-page)(like `nemo-view`) uses to build a model to allow you to do element-level methods in a simple, concise, and precise way.
 * `wdb-spec.js` uses the [nemo-wd-bridge](https://github.com/paypal/nemo-wd-bridge) plugin to provide the [wd](https://github.com/admc/wd) interface, for those who prefer it.
-  * You need selenium-standalone on your sytem. To get it, [start here](http://www.seleniumhq.org/download/)
+  * You need selenium-standalone on your system. To get it, [start here](http://www.seleniumhq.org/download/)
   * export the path to selenium-standalone as `SELENIUM_STANDALONE_PATH=/path/to/selenium-standalone.jar`
   * use the command `grunt loopmocha:wdb` to start the wdb spec
   

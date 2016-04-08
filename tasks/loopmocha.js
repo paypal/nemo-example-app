@@ -31,7 +31,11 @@ module.exports = function loopmocha(grunt) {
         {
           "description": "default"
         }
-      ]
+      ],
+      "DEBUG": "nemo*"
+    },
+    "default": {
+      "src": "<%=loopmocha.src%>"
     },
     "wdb": {
       "src": "<%=loopmocha.src%>",

@@ -13,7 +13,7 @@
     },
     "screenshot": {
       "module": "nemo-screenshot",
-      "arguments": ["path:report"]
+      "arguments": ["path:report", ["exception", "click"]]
     },
     "logger": {
       "module": "nemo-logger",
