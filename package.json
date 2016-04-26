@@ -61,7 +61,7 @@
     "grunt-mocha-cli": "^1.7.0",
     "mocha": "^2",
     "nconf": "~0.6.7",
-    "nemo": "^2.0.0",
+    "nemo": "2.1.1",
     "nemo-logger": "^1.0.1",
     "nemo-page": "^1.0.0",
     "nemo-screenshot": "^2.0.0",
