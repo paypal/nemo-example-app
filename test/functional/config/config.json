@@ -21,6 +21,12 @@
     },
     "wdb": {
       "module": "nemo-wd-bridge"
+    },
+    "nemo-fixo": {
+      "modules": "nemo-fixo",
+      "arguments": [{
+        "baseDir": "path:fixture"
+      }]
     }
   },
   "driver": {
