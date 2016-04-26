@@ -13,21 +13,14 @@
     },
     "screenshot": {
       "module": "nemo-screenshot",
-<<<<<<< c209efe7d01d3ebd51b35c1eb10b7fb66db1eee3
       "arguments": ["path:report", ["exception", "click"]]
     },
     "logger": {
       "module": "nemo-logger",
       "arguments": ["WARNING"]
-=======
-      "arguments": ["path:report"]
-<<<<<<< 7923858c78023c3d3a16bec27e5ecee87e97c24e
     },
     "wdb": {
       "module": "nemo-wd-bridge"
->>>>>>> wdb stuff
-=======
->>>>>>> further wd stuff
     }
   },
   "driver": {
