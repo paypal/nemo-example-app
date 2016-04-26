@@ -1,0 +1,16 @@
+{
+  "plugins": {
+    "wdb": {
+      "module": "nemo-wd-bridge"
+    }
+  },
+  "driver": {
+    "jar": "env:SELENIUM_STANDALONE_PATH",
+    "browser": "firefox",
+    "server": "localhost",
+    "local": true
+  },
+  "data": {
+    "baseUrl": "http://localhost:8000"
+  }
+}

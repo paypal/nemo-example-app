@@ -2,6 +2,7 @@
 
 var nconf = require('nconf');
 var path = require('path');
+
 module.exports = function loopmocha(grunt) {
   nconf.env()
     .argv();
@@ -14,6 +15,7 @@ module.exports = function loopmocha(grunt) {
       "basedir": path.resolve(__dirname, "../test/functional"),
       "nemoBaseDir": '<%=loopmocha.options.basedir%>',
       "mocha": {
+        "harmony": "",
         "timeout": grunt.option("timeout") || 600000,
         "grep": grunt.option("grep") || "@flow@",
         "debug": grunt.option("debug") || 0,
@@ -29,7 +31,21 @@ module.exports = function loopmocha(grunt) {
         {
           "description": "default"
         }
-      ]
+      ],
+      "DEBUG": "nemo*"
+    },
+    "default": {
+      "src": "<%=loopmocha.src%>"
+    },
+    "wdb": {
+      "src": "<%=loopmocha.src%>",
+      "options": {
+        "NODE_ENV": "wd",
+        "SELENIUM_STANDALONE_PATH": nconf.get("SELENIUM_STANDALONE_PATH"),
+        "mocha": {
+          "grep": "@wdb"
+        }
+      }
     }
   };
 };
