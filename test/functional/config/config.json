@@ -17,20 +17,20 @@
     },
     "logger": {
       "module": "nemo-logger",
-      "arguments": ["WARNING"]
+      "arguments": ["OFF"]
     },
     "wdb": {
       "module": "nemo-wd-bridge"
     },
     "nemo-fixo": {
-      "modules": "nemo-fixo",
+      "module": "nemo-fixo",
       "arguments": [{
-        "baseDir": "path:fixture"
+        "baseDir": "path:./fixture"
       }]
     }
   },
   "driver": {
-    "browser": "firefox"
+    "browser": "chrome"
   },
   "data": {
     "baseUrl": "https://fast-castle-8102.herokuapp.com"
