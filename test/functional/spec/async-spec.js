@@ -10,7 +10,7 @@ describe('@async@ uses ES6 async/await', function () {
     after(async function () {
         await nemo.driver.quit();
     });
-    it('should reject a promise', async function () {
+    it('should use async/await control flow', async function () {
         //login
         await nemo.driver.get('http://www.google.com');
         await nemo.view._waitVisible('[name=q]');
