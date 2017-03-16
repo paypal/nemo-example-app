@@ -61,7 +61,7 @@
     "grunt-mocha-cli": "^1.7.0",
     "mocha": "^2",
     "nconf": "~0.6.7",
-    "nemo": "^3.0.0-alpha.2",
+    "nemo": "git://github.com/paypal/nemo.git#3.0-alpha",
     "nemo-view": "git://github.com/grawk/nemo-view.git#nemo3.compat",
     "supertest": "^0.9.0",
     "xunit-file": "0.0.5"
