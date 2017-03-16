@@ -4,10 +4,8 @@ let nemo = {};
 const util = require('../util');
 
 describe('@async@ uses ES6 async/await', function () {
-    before(function () {
-        return Nemo().then(function (n) {
-            nemo = n;
-        });
+    before(async function () {
+        nemo = await Nemo();
     });
     after(function () {
         return nemo.driver.quit();
