@@ -7,8 +7,8 @@ describe('@async@ uses ES6 async/await', function () {
     before(async function () {
         nemo = await Nemo();
     });
-    after(function () {
-        return nemo.driver.quit();
+    after(async function () {
+        await nemo.driver.quit();
     });
     it('should reject a promise', async function () {
         //login
