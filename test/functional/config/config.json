@@ -3,30 +3,6 @@
     "view": {
       "module": "nemo-view",
       "arguments": ["path:locator"]
-    },
-    "page": {
-      "module": "nemo-page",
-      "arguments": [
-        "path:page-locator",
-        null
-      ]
-    },
-    "screenshot": {
-      "module": "nemo-screenshot",
-      "arguments": ["path:report", ["exception", "click"]]
-    },
-    "logger": {
-      "module": "nemo-logger",
-      "arguments": ["OFF"]
-    },
-    "wdb": {
-      "module": "nemo-wd-bridge"
-    },
-    "nemo-fixo": {
-      "module": "nemo-fixo",
-      "arguments": [{
-        "baseDir": "path:./fixture"
-      }]
     }
   },
   "driver": {
