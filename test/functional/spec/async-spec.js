@@ -11,7 +11,7 @@ describe('@async@ uses ES6 async/await', function () {
         await nemo.driver.quit();
     });
     it('should use async/await control flow', async function () {
-        //login
+        //google search
         await nemo.driver.get('http://www.google.com');
         await nemo.view._waitVisible('[name=q]');
         await nemo.view._find('[name=q]').sendKeys('webdriver');
