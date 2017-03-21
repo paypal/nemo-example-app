@@ -2,6 +2,7 @@
 
 var nconf = require('nconf');
 var path = require('path');
+var confit = require('confit');
 
 module.exports = function loopmocha(grunt) {
   nconf.env()

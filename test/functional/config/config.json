@@ -10,5 +10,14 @@
   },
   "data": {
     "baseUrl": "https://fast-castle-8102.herokuapp.com"
+  },
+  "test": {
+    "base": {
+      "timeout": 120000,
+      "reporter": "spec"
+    },
+    "async": {
+      "grep": "async"
+    }
   }
 }
