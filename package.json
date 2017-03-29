@@ -25,7 +25,8 @@
     }
   ],
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "automation": "nemo-runner -B test/functional -P firefox,chrome"
   },
   "license": "Apache 2.0",
   "bugs": {
@@ -60,8 +61,10 @@
     "grunt-loop-mocha": "^1.1.0",
     "grunt-mocha-cli": "^1.7.0",
     "mocha": "^2",
+    "mochawesome": "^2.0.4",
     "nconf": "~0.6.7",
     "nemo": "git://github.com/paypal/nemo.git#3.0-alpha",
+    "nemo-runner": "~0.0.2",
     "nemo-view": "git://github.com/grawk/nemo-view.git#nemo3.compat",
     "supertest": "^0.9.0",
     "xunit-file": "0.0.5"
