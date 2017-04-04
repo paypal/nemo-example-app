@@ -31,6 +31,7 @@
         <select name="type" id="type">
             <option value="">Select One</option>
             <option value="Misa">Misa</option>
+            <option value="Diners Clorb">Diners Clorb</option>
             <option value="Vaster Card">Vaster Card</option>
         </select>
         </p>

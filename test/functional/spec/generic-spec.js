@@ -1,7 +1,7 @@
 /*global nemo:true, describe:true, it:true */
 const util = require('../util');
 
-describe('@async@ uses ES6 async/await', function () {
+describe('@generic-spec@ uses ES6 async/await', function () {
     it('should kill the driver', async function () {
         //google search
         let nemo = this.nemo;

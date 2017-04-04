@@ -2,67 +2,18 @@
   "plugins": {
     "view": {
       "module": "nemo-view",
-      "arguments": [
-        "path:locator"
-      ]
+      "arguments": ["path:locator"]
+    },
+    "page": {
+      "module": "nemo-page",
+      "arguments": ["path:page-locator", null]
+    },
+    "wdb": {
+      "module": "nemo-wd-bridge"
     }
-  },
-  "driver": {
-    "browser": "firefox"
   },
   "data": {
-    "baseUrl": "https://fast-castle-8102.herokuapp.com"
+    "baseUrl": "http://localhost:8000"
   },
-  "profiles": {
-    "base": {
-      "tests": "path:spec/*sync*.js",
-      "threads": 5,
-      "env": {
-        "SELENIUM_STANDALONE_PATH": "path:foo"
-      },
-      "mocha": {
-        "timeout": 120000,
-        "reporter": "mochawesome",
-        "retries": 0,
-        "grep": "argv:grep",
-        "reporterOptions": {
-          "reportDir": "path:report",
-          "reportFilename": "defaultReport"
-        }
-      }
-    },
-    "firefox": {
-      "driver": {
-        "browser": "firefox"
-      },
-      "mocha": {
-        "reporterOptions": {
-          "reportDir": "path:report",
-          "reportFilename": "firefoxReport"
-        }
-      }
-    },
-    "chrome": {
-      "driver": {
-        "browser": "chrome"
-      },
-      "mocha": {
-        "reporterOptions": {
-          "reportDir": "path:report",
-          "reportFilename": "chromeReport"
-        }
-      }
-    },
-    "phantom": {
-      "driver": {
-        "browser": "phantomjs"
-      },
-      "mocha": {
-        "reporterOptions": {
-          "reportDir": "path:report",
-          "reportFilename": "phantomReport"
-        }
-      }
-    }
-  }
+  "profiles": "import:./profiles"
 }
