@@ -26,8 +26,8 @@
   ],
   "scripts": {
     "start": "node index.js",
-    "nemo": "nemo-runner -B test/functional -P firefox,chrome -G @page,@spec",
-    "nemo:debug": "nemo-runner --inspect --debug-brk -B test/functional -P firefox -G @view"
+    "nemo": "nemo-runner -B test/functional -P firefox,chrome -G @page,@view",
+    "nemo:debug": "nemo-runner --inspect --debug-brk -B test/functional -P firefox -G @page"
   },
   "license": "Apache 2.0",
   "bugs": {
@@ -64,7 +64,7 @@
     "mocha": "^2",
     "mochawesome": "^2.0.4",
     "nconf": "~0.6.7",
-    "nemo": "git://github.com/paypal/nemo.git#3.0-alpha",
+    "nemo": "3.0.0-alpha.1",
     "nemo-page": "git://github.com/grawk/nemo-page.git#2.x",
     "nemo-runner": "~0.0.2",
     "nemo-view": "git://github.com/grawk/nemo-view.git#nemo3.compat",

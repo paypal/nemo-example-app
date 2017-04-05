@@ -1,9 +1,8 @@
 {
   "base": {
-    "tests": "path:spec/!(wdb|async)*.js",
-    "threads": 5,
+    "tests": "path:spec/!(wdb)*.js",
     "env": {
-      "DEBUG": ""
+      "DEBUG": "nemo*"
     },
     "mocha": {
       "timeout": 180000,

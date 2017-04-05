@@ -1,4 +1,7 @@
 {
+  "driver": {
+    "browser": "firefox"
+  },
   "plugins": {
     "view": {
       "module": "nemo-view",
