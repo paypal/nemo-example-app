@@ -36,7 +36,6 @@ describe('@page-spec@', function () {
             number: ccbad,
             type: cctype
         });
-        debugger;
         data = await account.card.collect();
         assert.equal(data.number, ccbad);
         assert.equal(data.type, cctype);
