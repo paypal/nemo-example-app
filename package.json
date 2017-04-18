@@ -25,7 +25,15 @@
     }
   ],
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "nemo": "nemo-runner -B test/functional",
+    "nemo:generic": "nemo-runner -B test/functional -G @generic",
+    "nemo:flow": "nemo-runner -B test/functional -G @flow",
+    "nemo:view": "nemo-runner -B test/functional -G @view",
+    "nemo:page": "nemo-runner -B test/functional -G @page",
+    "nemo:mobile": "nemo-runner -B test/functional -P ios",
+    "nemo:parallel": "nemo-runner -B test/functional -G @page,@flow,@view,@generic",
+    "nemo:debug": "nemo-runner --debug-brk -B test/functional -P chrome -G @view"
   },
   "license": "Apache 2.0",
   "bugs": {
@@ -57,16 +65,17 @@
     "grunt-copy-to": "0.0.10",
     "grunt-dustjs": "^1.2.1",
     "grunt-localizr": "^0.1.0",
-    "grunt-loop-mocha": "^1.1.0",
     "grunt-mocha-cli": "^1.7.0",
     "mocha": "^2",
+    "mochawesome": "^2.0.5",
     "nconf": "~0.6.7",
-    "nemo": "^2.0.0",
+    "nemo": "git://github.com/paypal/nemo.git#feature.config.breakout",
     "nemo-logger": "^1.0.1",
-    "nemo-page": "^1.0.0",
+    "nemo-page": "git://github.com/grawk/nemo-page.git#2.x",
+    "nemo-runner": "git://github.com/paypal/nemo-runner.git",
     "nemo-screenshot": "^2.0.0",
     "nemo-view": "^2.0.0",
-    "nemo-wd-bridge": "0.0.1",
+    "nemo-wd-bridge": "git://github.com/paypal/nemo-wd-bridge.git#develop",
     "supertest": "^0.9.0",
     "xunit-file": "0.0.5"
   }

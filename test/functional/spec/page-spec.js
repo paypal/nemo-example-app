@@ -1,74 +1,97 @@
 /*global nemo:true, describe:true, it:true */
-var Nemo = require('nemo');
-var nemo = {};
 var util = require('../util');
+var assert = require('assert');
+var ccgood = '1433232243442322';
+var ccbad = '1001001';
+var cctype = 'Vaster Card';
+var bagood = '0522343992';
+var babad = '1001001';
+var barouting = '343434';
 
-describe('@page@', function () {
-  before(function (done) {
-    nemo = Nemo(done);
-  });
-  after(function (done) {
-    nemo.driver.quit().then(done);
-  });
-  it('should execute high level functionality using nemo page methods', function (done) {
-
-    //login
-    nemo.driver.get(nemo.data.baseUrl);
-    util.waitForJSReady(nemo);
-    nemo.page.home.login.email.waitForDisplayed();
-    nemo.page.home.login.setValue({
-      email: 'me@mine.com',
-      password: '11111111'
+describe('@page-spec@', function () {
+    before(function () {
+        return util.login(this.nemo);
     });
-    nemo.page.home.login.button.click();
-
-    //add card success
-    nemo.page.home.card.number.waitForDisplayed();
-    nemo.page.home.card.setValue({
-      number: '123456789012',
-      type: 'Misa'
+    after(function () {
+        return util.logout(this.nemo);
     });
-    nemo.driver.sleep(5000);
-    nemo.page.home.card.button.click();
-    nemo.page.home.card.success.waitForPresent();
+    it('should @success@fully add card', function () {
+        var nemo = this.nemo;
+        var account = nemo.page.account;
+        return account.nav.cardLink.click().then(function () {
+            account.card.number.waitForDisplayed();
+            account.card.setValue({
+                number: ccgood,
+                type: cctype
+            });
+            return account.card.collect();
 
-    //add card fail
-    nemo.page.home.card.number.waitForDisplayed();
-    nemo.page.home.card.setValue({
-      number: '1001001',
-      type: 'Misa'
+        })
+            .then(function (data) {
+                assert.equal(data.number, ccgood);
+                assert.equal(data.type, cctype);
+                account.card.button.click();
+                account.card.success.waitForPresent();
+            });
     });
-    nemo.page.home.card.button.click();
-    nemo.page.home.card.failure.waitForPresent();
+    it('should @fail@ to add card', function () {
+        var nemo = this.nemo;
+        var account = nemo.page.account;
+        return account.nav.cardLink.click().then(function () {
+            account.card.number.waitForDisplayed();
+            account.card.setValue({
+                number: ccbad,
+                type: cctype
+            });
+            return account.card.collect();
+        })
+            .then(function (data) {
+                assert.equal(data.number, ccbad);
+                assert.equal(data.type, cctype);
+                account.card.button.click();
+                account.card.failure.waitForDisplayed();
+            });
 
-    //add bank success
-    nemo.page.home.nav.bankLink.click();
-    nemo.page.home.bank.number.waitForDisplayed()
-    nemo.page.home.bank.setValue({
-      number: '0123545332',
-      routing: '343434'
+
     });
-    nemo.page.home.bank.button.click();
-    nemo.page.home.bank.success.waitForPresent();
+    it('should @success@fully add bank', function () {
+        var nemo = this.nemo;
+        var account = nemo.page.account;
 
-    //add bank fail
-    // TODO Added for the similarity to view-spec, but this is not correct...
-    nemo.page.home.nav.bankLink.click();
-    nemo.page.home.bank.number.waitForDisplayed()
-    nemo.page.home.bank.setValue({
-      number: '1001001',
-      routing: '92929'
+        return account.nav.bankLink.click().then(function () {
+            account.bank.number.waitForDisplayed();
+            account.bank.setValue({
+                number: bagood,
+                routing: barouting
+            });
+            return account.bank.collect();
+        })
+            .then(function (data) {
+                assert.equal(data.number, bagood);
+                assert.equal(data.routing, barouting);
+                account.bank.button.click();
+                account.bank.success.waitForPresent();
+            });
+
     });
-    nemo.page.home.bank.button.click();
-    nemo.page.home.bank.failure.waitForPresent();
+    it('should @fail@ to add bank', function () {
+        var nemo = this.nemo;
+        var account = nemo.page.account;
 
-    //logout
-    nemo.page.home.nav.logoutLink.click();
-    nemo.page.home.login.email.waitForDisplayed().then(function () {
-      done();
-    }, function (err) {
-      done(err);
-    })
+        return account.nav.bankLink.click().then(function () {
+            account.bank.number.waitForDisplayed();
+            account.bank.setValue({
+                number: babad,
+                routing: barouting
+            });
+            return account.bank.collect();
+        })
+            .then(function (data) {
+                assert.equal(data.number, babad);
+                assert.equal(data.routing, barouting);
+                account.bank.button.click();
+                account.bank.failure.waitForPresent();
+            });
+    });
 
-  });
 });

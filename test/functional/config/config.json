@@ -17,16 +17,17 @@
     },
     "logger": {
       "module": "nemo-logger",
-      "arguments": ["WARNING"]
+      "arguments": ["ALL"]
     },
     "wdb": {
       "module": "nemo-wd-bridge"
     }
   },
-  "driver": {
-    "browser": "firefox"
-  },
+//  "driver": {
+//    "browser": "chrome"
+//  },
   "data": {
     "baseUrl": "https://fast-castle-8102.herokuapp.com"
-  }
+  },
+  "profiles": "import:./profiles"
 }

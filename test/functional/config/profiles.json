@@ -1,0 +1,66 @@
+{
+  "base": {
+    "tests": "path:spec/!(wdb)*.js",
+    "env": {
+      "DEBUG": "nemo*"
+    },
+    "mocha": {
+      "timeout": 180000,
+      "reporter": "mochawesome",
+      "retries": 0,
+      "grep": "argv:grep",
+      "reporterOptions": {
+        "reportDir": "path:report",
+        "reportFilename": "defaultReport"
+      }
+    }
+  },
+  "chrome": {
+    "driver": {
+      "browser": "chrome"
+    },
+    "mocha": {
+      "reporterOptions": {
+        "reportDir": "path:report",
+        "reportFilename": "chromeReport"
+      }
+    }
+  },
+  "firefox": {
+    "driver": {
+      "browser": "firefox"
+    },
+    "mocha": {
+      "reporterOptions": {
+        "reportDir": "path:report",
+        "reportFilename": "firefoxReport"
+      }
+    }
+  },
+  "ios": {
+    "tests": "path:spec/wdb*.js",
+    "driver": {
+      "builders": {
+        "withCapabilities": [
+          {
+            "browserName": "safari",
+            "appium-version": "1.6.3",
+            "platformName": "iOS",
+            "automationName": "XCUITest",
+            "deviceName": "iPhone 6"
+          }
+        ],
+        "usingServer": [
+          "http://localhost:4723/wd/hub"
+        ]
+      },
+      "local": false
+    },
+    "mocha": {
+      "reporterOptions": {
+        "reportDir": "path:report",
+        "reportFilename": "iosReport"
+      }
+    }
+  }
+}
