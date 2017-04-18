@@ -23,7 +23,7 @@ $ npm start
 Run Nemo
 
 ```bash
-$ grunt automation
+$ npm run nemo
 ```
 
 If you didn't get a successful test run, where you saw a browser open on your desktop,
@@ -57,10 +57,9 @@ of automation.
 ([see here](https://github.com/paypal/nemo-view/blob/master/README.md#locator-methods)). Illustrates a second pass
 of automation where inline locator strings are separated into JSON locator files.
 * `page-spec.js` uses JSON locator files which [nemo-page](https://github.com/OuranosSkia/nemo-page)(like `nemo-view`) uses to build a model to allow you to do element-level methods in a simple, concise, and precise way.
-* `wdb-spec.js` uses the [nemo-wd-bridge](https://github.com/paypal/nemo-wd-bridge) plugin to provide the [wd](https://github.com/admc/wd) interface, for those who prefer it.
-  * You need selenium-standalone on your system. To get it, [start here](http://www.seleniumhq.org/download/)
-  * export the path to selenium-standalone as `SELENIUM_STANDALONE_PATH=/path/to/selenium-standalone.jar`
-  * use the command `grunt loopmocha:wdb` to start the wdb spec
+* `wdb-spec.js` uses the [nemo-wd-bridge](https://github.com/paypal/nemo-wd-bridge) plugin to provide the [wd](https://github.com/admc/wd) interface, for those who want to use appium.
+  * You need an appium server running locally as well as an iOS simulator
+  * Run the appium/wdb spec via `npm run nemo:mobile`
   
 * `flow-spec.js`
   * uses `flow/*.js` modules to illustrate how to abstract functionality into shareable modules
@@ -75,17 +74,31 @@ If you want to see a good amount of logging information, set `DEBUG=nemo*,seleni
 Additionally, the `nemo-logger` module is installed to switch on the [selenium-webdriver logging](http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/logging.html). The output can be quite verbose, 
 but if you need it, change the value of the plugin argument in the `test/functional/config/config.json` file from `WARNING` to `ALL`.
 
-## Using mocha directly
+## Using nemo-runner
 
-Using `grunt auto` runs mocha via the intermediate [grunt-loop-mocha](https://github.com/grawk/grunt-loop-mocha) task.
-Sometimes, for debugging purposes, it is nice to strip that layer away and run the tests via mocha directly. To do that
-in this repo, do the following:
+You will note the various `nemo` scripts in package.json:
 
-```bash
-$ export nemoBaseDir=/path/to/this/repo/nemo-example-app/test/functional
-$ DEBUG=nemo*,selenium-drivex*
-$ node_modules/.bin/mocha test/functional/spec/*.js --timeout 30000 --grep @flow --harmony
+```js
+"scripts": {
+    "start": "node index.js",
+    "nemo": "nemo-runner -B test/functional",
+    "nemo:generic": "nemo-runner -B test/functional -G @generic",
+    "nemo:flow": "nemo-runner -B test/functional -G @flow",
+    "nemo:view": "nemo-runner -B test/functional -G @view",
+    "nemo:page": "nemo-runner -B test/functional -G @page",
+    "nemo:mobile": "nemo-runner -B test/functional -P ios",
+    "nemo:parallel": "nemo-runner -B test/functional -G @page,@flow,@view,@generic",
+    "nemo:debug": "nemo-runner --debug-brk -B test/functional -P chrome -G @view"
+  },
 ```
 
-Note: the `DEBUG` variable is optional, if you want to see a lot of logging during your tests
-Note: the `harmony` flag is only necessary if you are using node < v4
+These provide shortcuts for you to call nemo-runner with preset arguments. Note that `nemo:parallel` will launch four parallel browser instances.
+Parallelism is also driven by the number of profiles `-P` specified. So, the # of parallel processes would be equal to `-P` x `-G`. This allows the user
+a lot of options in how they define parallelism in their test suites.
+
+## Debugging
+
+The `nemo:debug` npm script is included as an example of how to launch the nemo suite in a debugger. Call `npm run nemo:debug`,
+then start a remote debugger (using WebStorm or `node-inspector`). You can then set and hit breakpoints as your suite runs.
+
+Note: this pattern will change if you are using node@7 and above, as there is a built in inspector.
